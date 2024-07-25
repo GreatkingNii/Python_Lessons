@@ -1,10 +1,5 @@
-def recursion(k):
-    if (k>0):
-        result=k+recursion(k-1)
-        print(result)
-    else:
-        result=0
-    return result
+def average(a,b,c,d):
+    average_number= (a+b+c+d)/2
+    return average_number
+average(6,79,34,12)
 
-print('The recursive values are: ')
-recursion(6)
