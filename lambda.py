@@ -13,8 +13,3 @@
 
 # print(sqrnb) # Using lambda to loop through the list of number.
 
-
-def myfunc(n):
-    return lambda x:x**n, numbers
-squarenumb=myfunc(2)
-print(7)
