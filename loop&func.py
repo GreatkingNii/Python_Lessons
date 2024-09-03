@@ -7,4 +7,4 @@ def value(step):
         for x in numbers:
             if x%2==step:
                 print (x)
-value(4)
+value(0)

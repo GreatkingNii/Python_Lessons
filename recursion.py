@@ -3,3 +3,4 @@ def average(a,b,c,d):
     return average_number
 average(6,79,34,12)
 
+print(list(average))

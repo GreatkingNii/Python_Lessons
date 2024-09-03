@@ -1,4 +1,4 @@
-x=2
+x=4
 
 while x<10:
     print (x)
