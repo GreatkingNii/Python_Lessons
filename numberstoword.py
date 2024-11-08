@@ -28,16 +28,16 @@ num = StringVar()
 
 title = Label(root, text='Number to Words Converter', fg='grey', font=('Arial', 15, 'bold')).place(x=220, y=10)
 
-formats_label = Label(root, text="Formats supported:", fg="green", font=("Arial", 10, 'bold')).place(x=100, y=70)
-pos_format_label = Label(root, text="1. Positives", fg="green", font=("Arial", 10, 'bold')).place(x=200, y=90)
-neg_format_label = Label(root, text="2. Negatives", fg="green", font=("Arial", 10, 'bold')).place(x=200, y=110)
-zero_format_label = Label(root, text="3. Zeros", fg="green", font=("Arial", 10, 'bold')).place(x=200, y=130)
-float_format_label = Label(root, text="4. Floating points/decimals/fractions", fg="green", font=("Arial", 10, 'bold')).place(x=200, y=150)
+formats_label = Label(root, text="Formats supported:", fg="Black", font=("Arial", 10, 'bold')).place(x=100, y=70)
+pos_format_label = Label(root, text="Positives", fg="Black", font=("Arial", 10, 'bold')).place(x=200, y=90)
+neg_format_label = Label(root, text="Negatives", fg="Black", font=("Arial", 10, 'bold')).place(x=200, y=110)
+zero_format_label = Label(root, text="Zeros", fg="Black", font=("Arial", 10, 'bold')).place(x=200, y=130)
+float_format_label = Label(root, text="Floating points/decimals/fractions", fg="Black", font=("Arial", 10, 'bold')).place(x=200, y=150)
 
-num_entry_label = Label(root, text="Enter a number:", fg="Blue", font=("Arial", 15, 'bold')).place(x=50, y=200)
+num_entry_label = Label(root, text="Enter a number:", fg="Purple", font=("Arial", 15, 'bold')).place(x=50, y=200)
 num_entry = Entry(root, textvariable=num, width=30).place(x=220, y=200)
 
-btn = Button(master=root, text="Calculate", fg="green", font=("Arial", 10, 'bold'), command=numberstowords).place(x=280, y=230)
+btn = Button(master=root, text="Calculate", fg="Black", font=("Arial", 10, 'bold'), command=numberstowords).place(x=280, y=230)
 
 display = Label(root, text="", fg="black", font=("Arial", 10, 'bold'))
 display.place(x=10, y=300)
