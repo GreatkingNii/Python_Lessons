@@ -1,0 +1,35 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+t_max = 1                   # Simulated time
+fs = 100                    # Sampling frequency
+f_c = 10                    # Carrier frequency
+
+# Signal
+t = np.linspace(0, t_max, t_max*fs)
+signal = np.cos(2*np.pi*f_c*t)
+
+
+# AWGN channel
+SNR = 20
+S = sum(abs(signal)**2)/len(signal)         # Signal power (Natural)
+S_db = 10*np.log10(S)                       # Signal power (dB)
+N_db = S_db-SNR                             # Noise power (dB)
+N = 10**(N_db/10)                           # Noise power (Natural)
+mean = 0                                    # Noise mean
+std = np.sqrt(N)                            # Noise standard deviation
+
+noise = np.random.normal(mean, std, size=len(signal))
+
+rx_signal = signal + noise
+
+plt.figure(figsize=(12, 6))
+plt.plot(t, signal, label='Original Signal')
+plt.plot(t, noise, label='Noise', alpha=0.5)
+plt.plot(t, rx_signal, label='Received Signal', linestyle='--')
+plt.title('AWGN Channel Simulation')
+plt.xlabel('Time [s]')
+plt.ylabel('Amplitude')
+plt.legend()
+plt.grid(True)
+plt.show()
